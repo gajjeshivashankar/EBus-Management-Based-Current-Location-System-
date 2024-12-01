@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Registration</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+    <div class="register-container">
+        <h1>Admin Registration</h1>
+        <form id="admin-register-form">
+            <label for="admin-username">Username:</label>
+            <input type="text" id="admin-username" placeholder="Enter username" required>
+
+            <label for="admin-email">Email:</label>
+            <input type="email" id="admin-email" placeholder="Enter email" required>
+
+            <label for="admin-password">Password:</label>
+            <input type="password" id="admin-password" placeholder="Enter password" required>
+
+            <label for="admin-confirm-password">Confirm Password:</label>
+            <input type="password" id="admin-confirm-password" placeholder="Confirm password" required>
+
+            <button type="submit">Register</button>
+        </form>
+        <p id="admin-error" class="error-message"></p>
+        <div class="login-link">
+            <p>Already registered? <a href="admin-login.html">Login</a></p>
+        </div>
+    </div>
+    <!-- <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js">import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+        import { getDatabase, ref, set, get, child, query, equalTo } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
+
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAJJA5VUpGujpwRkWY4p4d1WH2Ke9NZ21Q",
+            authDomain: "ebus-mbcls.firebaseapp.com",
+            projectId: "ebus-mbcls",
+            storageBucket: "ebus-mbcls.firebasestorage.app",
+            messagingSenderId: "336828784236",
+            appId: "1:336828784236:web:3ed13745fce3d54baac249",
+            measurementId: "G-7YE66HND5C"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        export const db = getDatabase(app);
+    </script> -->
+    <script type="module" src="admin-register.js"></script>
+</body>
+
+</html>

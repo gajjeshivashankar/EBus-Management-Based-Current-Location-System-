@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Profile</title>
+    <link rel="stylesheet" href="admin.css">
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.style.display = 'none';
+            });
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        function logout() {
+            const confirmLogout = confirm("Are you sure you want to logout?");
+            if (confirmLogout) {
+                // Redirect to login page
+                window.location.href = 'main.html';
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="profile-container">
+        <!-- Logout Button -->
+        <div class="logout-container">
+            <button onclick="logout()">Logout</button>
+        </div>
+
+        <h1>Admin Profile</h1>
+
+        <!-- Navigation Buttons -->
+        <div class="profile-navigation">
+            <button onclick="showSection('drivers-section')">View Registered Drivers</button>
+            <button onclick="showSection('add-driver-section')">Add New Driver</button>
+        </div>
+
+        <!-- Registered Drivers Section -->
+        <div id="drivers-section" class="section">
+            <h2>Registered Drivers</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>License Number</th>
+                    </tr>
+                </thead>
+                <tbody id="drivers-data">
+                    <!-- Data populated dynamically using JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Add New Driver Section -->
+        <div id="add-driver-section" class="section" style="display: none;">
+            <h2>Add New Driver</h2>
+            <form id="add-driver-form" class="driver-form">
+                <div class="form-row">
+                    <label for="driver-name">Full Name:</label>
+                    <input type="text" id="driver-name" placeholder="Enter driver name" required>
+                </div>
+                <div class="form-row">
+                    <label for="driver-email">Email:</label>
+                    <input type="email" id="driver-email" placeholder="Enter driver email" required>
+                </div>
+                <div class="form-row">
+                    <label for="driver-license">License Number:</label>
+                    <input type="text" id="driver-license" placeholder="Enter license number" required>
+                </div>
+                <div class="form-row">
+                    <label for="driver-password">Password:</label>
+                    <input type="password" id="driver-password" placeholder="Enter driver password" required>
+                </div>
+                <div class="form-row-form-actions">
+                    <button type="submit">Add Driver</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="admin-profile.js"></script>
+
+</body>
+
+</html>

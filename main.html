@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eBus Management - Home</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="home-container">
+        <h1>Welcome to eBus Management System</h1>
+        <p>Select your role to proceed:</p>
+        <div class="button-container">
+            <button onclick="redirectTo('admin-login.html')">Admin Login</button>
+            <button onclick="redirectTo('driver-login.html')">Driver Login</button>
+            <button onclick="redirectTo('user-login.html')">User Login</button>
+        </div>
+    </div>
+    <script>
+        function redirectTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+
+</html>
