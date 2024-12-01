@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="user-profile.css">
+</head>
+
+<body>
+    <div class="profile-container">
+        <!-- Logout Button -->
+        <div class="logout-container">
+            <button onclick="logout()">Logout</button>
+        </div>
+
+        <h1>User Profile</h1>
+
+        <!-- Search Bus Travel -->
+        <div class="search-container">
+            <h2>Search Bus Travel Details</h2>
+            <form onsubmit="event.searchBusDetails();">
+                <div class="form-row">
+                    <label for="start-location">Start Location:</label>
+                    <input type="text" id="start-location" placeholder="Enter start location" required>
+                </div>
+                <div class="form-row">
+                    <label for="destination-location">Destination Location:</label>
+                    <input type="text" id="destination-location" placeholder="Enter destination location" required>
+                </div>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+
+        <!-- Bus Travel Details Section -->
+        <div class="travel-details-container">
+            <h2>Bus Travel Details</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Bus Registration</th>
+                        <th>Bus Type</th>
+                        <th>Date</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Starting Time</th>
+                        <th>Reaching Time</th>
+                        <th>Contact</th>
+                    </tr>
+                </thead>
+                <tbody id="travel-details">
+                    <!-- Travel details populated dynamically -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script type="module" src="user-profile.js"></script>
+</body>
+
+</html>

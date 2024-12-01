@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Profile</title>
+    <link rel="stylesheet" href="driver-profile.css">
+</head>
+
+<body>
+    <div class="profile-container">
+        <!-- Logout Button -->
+        <div class="logout-container">
+            <button onclick="logout()">Logout</button>
+        </div>
+
+        <h1>Driver Profile</h1>
+
+        <!-- Navigation Buttons -->
+        <div class="profile-navigation">
+            <button onclick="showSection('view-details-section')">View Travel Details</button>
+            <button onclick="showSection('post-details-section')">Post/Edit Travel Details</button>
+        </div>
+
+        <!-- View Travel Details Section -->
+        <div id="view-details-section" class="section">
+            <h2>Posted Travel Details</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Travel ID</th>
+                        <th>Bus Registration</th>
+                        <th>Bus Type</th>
+                        <th>Date</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Starting Time</th>
+                        <th>Reaching Time</th>
+                        <th>Contact</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="travel-details">
+                    <!-- Travel details populated dynamically -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Post Travel Details Section -->
+        <div id="post-details-section" class="section" style="display: none;">
+            <h2>Post/Edit Travel Details</h2>
+            <form id="post-details-form" class="driver-form" onsubmit="handleFormSubmit(event)">
+                <input type="hidden" id="travel-id"> <!-- Hidden field for travel ID -->
+                <div class="form-row">
+                    <label for="bus-reg-number">Bus Registration Number:</label>
+                    <input type="text" id="bus-reg-number" placeholder="Enter bus registration number" required>
+                </div>
+                <div class="form-row">
+                    <label for="bus-type">Bus Type:</label>
+                    <input type="text" id="bus-type" placeholder="Enter bus type" required>
+                </div>
+                <div class="form-row">
+                    <label for="travel-date">Travel Date:</label>
+                    <input type="date" id="travel-date" required>
+                </div>
+                <div class="form-row">
+                    <label for="from-location">From:</label>
+                    <input type="text" id="from-location" placeholder="Enter starting location" required>
+                </div>
+                <div class="form-row">
+                    <label for="to-location">To:</label>
+                    <input type="text" id="to-location" placeholder="Enter destination location" required>
+                </div>
+                <div class="form-row">
+                    <label for="start-time">Starting Time:</label>
+                    <input type="time" id="start-time" required>
+                </div>
+                <div class="form-row">
+                    <label for="reaching-time">Reaching Time:</label>
+                    <input type="time" id="reaching-time" required>
+                </div>
+                <div class="form-row">
+                    <label for="contact-details">Contact Details:</label>
+                    <input type="text" id="contact-details" placeholder="Enter contact details" required>
+                </div>
+
+                <div class="form-row form-actions">
+                    <button type="submit">Save Travel Details</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="module" src="driver-profile.js"></script>
+</body>
+
+</html>
