@@ -1,0 +1,226 @@
+General styles body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Profile container */
+.profile-container {
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    overflow-y: auto;
+}
+
+/* Logout Button */
+.logout-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.logout-container button {
+    padding: 10px 15px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout-container button:hover {
+    background-color: #cc0000;
+}
+
+/* Navigation buttons */
+.profile-navigation button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.profile-navigation button:hover {
+    background-color: #0056b3;
+}
+
+/* Sections */
+.section {
+    margin-top: 20px;
+    display: none;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 10px;
+}
+
+th {
+    background-color: #f4f4f9;
+    font-weight: bold;
+}
+
+/* Form styles */
+.driver-form {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+.driver-form .form-row {
+    display: contents;
+}
+
+.driver-form label {
+    font-weight: bold;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.driver-form input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Center Button */
+.driver-form .form-actions {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.driver-form button {
+    padding: 12px 20px;
+    background-color: #32de84;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.driver-form button:hover {
+    background-color: #00b365;
+}
+
+/* Media Queries */
+/* For devices with max width of 768px (Tablets and smaller) */
+@media (max-width: 768px) {
+    .profile-container {
+        padding: 15px;
+    }
+
+    .driver-form {
+        grid-template-columns: 1fr;
+        /* Single column layout */
+        gap: 10px;
+        padding-bottom: 80px;
+    }
+
+    .driver-form label {
+        text-align: left;
+        /* Adjust labels for single-column layout */
+    }
+
+    .driver-form .form-actions {
+        position: relative;
+        transform: none;
+        margin-top: 20px;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+
+    button {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+/* For devices with max width of 480px (Phones) */
+@media (max-width: 480px) {
+    body {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .profile-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .driver-form {
+        grid-template-columns: 1fr;
+        /* Single column for small screens */
+        gap: 10px;
+    }
+
+    .driver-form label {
+        font-size: 0.85rem;
+    }
+
+    .driver-form input {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+
+    table {
+        font-size: 0.85rem;
+    }
+
+    th,
+    td {
+        padding: 6px;
+    }
+}

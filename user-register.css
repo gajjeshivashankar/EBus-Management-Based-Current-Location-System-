@@ -1,0 +1,152 @@
+/* styles.css */
+
+/* General styles for all forms */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Register container */
+.register-container {
+    width: 300px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Heading */
+h1 {
+    color: #007bff;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+/* Form labels and inputs */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+    text-align: left;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Register button */
+button[type="submit"] {
+    padding: 10px;
+    background-color: #32de84;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #00b36b;
+}
+
+/* Error message */
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+/* Login link */
+.login-link {
+    margin-top: 15px;
+}
+
+.login-link p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.login-link a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries */
+/* For devices with max width of 768px (Tablets and smaller) */
+@media (max-width: 768px) {
+    .register-container {
+        width: 80%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    input {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    button[type="submit"] {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .error-message {
+        font-size: 0.8rem;
+    }
+}
+
+/* For devices with max width of 480px (Phones) */
+@media (max-width: 480px) {
+    body {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .register-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.4em;
+    }
+
+    input {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    button[type="submit"] {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .error-message {
+        font-size: 0.8rem;
+    }
+
+    .login-link p {
+        font-size: 0.8rem;
+    }
+}

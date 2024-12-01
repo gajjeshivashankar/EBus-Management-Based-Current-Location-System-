@@ -1,0 +1,272 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Default height for most cases */
+    height: 115vh;
+    /* For specific cases requiring a larger height */
+}
+
+/* Profile container */
+.profile-container {
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    overflow-y: auto;
+}
+
+/* Registration container */
+.register-container {
+    width: 350px;
+    padding: 20px 30px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Headings */
+h1 {
+    font-size: 1.8rem;
+    color: 007bff;
+    margin-bottom: 20px;
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    text-align: left;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Buttons */
+button {
+    padding: 10px 15px;
+    background-color: #32de84;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #00b35c;
+}
+
+/* Logout Button */
+.logout-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.logout-container button {
+    padding: 10px 15px;
+    background-color: #ff4d4d;
+}
+
+.logout-container button:hover {
+    background-color: #cc0000;
+}
+
+/* Profile navigation buttons */
+.profile-navigation button {
+    padding: 10px 20px;
+    margin: 10px;
+}
+
+/* Sections */
+.section {
+    margin-top: 20px;
+    display: none;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 10px;
+}
+
+th {
+    background-color: #f4f4f9;
+    font-weight: bold;
+}
+
+/* Add Driver Form Styles */
+.driver-form {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.driver-form .form-row {
+    display: contents;
+}
+
+.driver-form label {
+    text-align: right;
+    padding-right: 10px;
+}
+
+.driver-form input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Center the Button */
+.driver-form .form-actions {
+    grid-column: span 2;
+    text-align: center;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.driver-form .form-row-form-actions {
+    display: flex;
+    justify-content: center;
+}
+
+/* Error message */
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    text-align: left;
+}
+
+/* Login link */
+.login-link {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.login-link p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.login-link a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries */
+/* For devices with max width of 768px (Tablets and smaller) */
+@media (max-width: 768px) {
+
+    .profile-container,
+    .register-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    button {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+    .driver-form {
+        max-width: 100%;
+    }
+
+    .driver-form label {
+        font-size: 0.9rem;
+    }
+}
+
+/* For devices with max width of 480px (Phones) */
+@media (max-width: 480px) {
+    body {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .profile-container,
+    .register-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    label {
+        font-size: 0.85rem;
+    }
+
+    input {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    button {
+        padding: 8px;
+        font-size: 0.85rem;
+    }
+
+    table {
+        font-size: 0.85rem;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+}
